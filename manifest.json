@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "Hawk — Get paid to watch charts",
+  "version": "0.3.1",
+  "description": "Your chart addiction finally pays you. Sponsored cards in the dead zones of your trading screen. You keep 50% of every slot, settled in USDC.",
+  "permissions": ["storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://app.hyperliquid.xyz/*",
+    "https://*.tradingview.com/*",
+    "https://www.binance.com/*",
+    "https://*.up.railway.app/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["ads.json"],
+      "matches": [
+        "https://app.hyperliquid.xyz/*",
+        "https://*.tradingview.com/*",
+        "https://www.binance.com/*"
+      ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://app.hyperliquid.xyz/*",
+        "https://*.tradingview.com/*",
+        "https://www.binance.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

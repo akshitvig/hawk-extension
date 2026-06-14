@@ -1,0 +1,35 @@
+[
+  {
+    "id": "house-slot",
+    "advertiser": "HAWK",
+    "headline": "This slot is for sale.",
+    "body": "Advertisers bid per ticker. The trader watching this chart keeps 50% of the bid, in USDC.",
+    "cta": "Bid on this chart →",
+    "url": "https://example.com/advertise",
+    "tickers": ["*"],
+    "cpmUsd": 20,
+    "weight": 1
+  },
+  {
+    "id": "demo-yieldhouse",
+    "advertiser": "YIELDHOUSE (demo)",
+    "headline": "Your idle margin earns nothing. Fix that.",
+    "body": "Demo creative. Per-ticker targeting means a vault protocol bids on exactly the trader it wants.",
+    "cta": "See demo",
+    "url": "https://example.com/demo",
+    "tickers": ["BTC", "ETH", "*"],
+    "cpmUsd": 28,
+    "weight": 2
+  },
+  {
+    "id": "demo-basislabs",
+    "advertiser": "BASIS LABS (demo)",
+    "headline": "Funding eating your PnL? Hedge it.",
+    "body": "Demo creative. A funding-rate product bidding only on perp charts — search-ad intent, display-ad simplicity.",
+    "cta": "See demo",
+    "url": "https://example.com/demo",
+    "tickers": ["HYPE", "SOL", "BTC"],
+    "cpmUsd": 35,
+    "weight": 2
+  }
+]

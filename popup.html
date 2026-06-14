@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 290px;
+      font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #0d1418;
+      color: #cfe3e0;
+    }
+    header {
+      display: flex; align-items: baseline; justify-content: space-between;
+      padding: 14px 16px 10px;
+      border-bottom: 1px solid #1f2d33;
+    }
+    .logo {
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 14px; font-weight: 700; color: #97fce4; letter-spacing: .06em;
+    }
+    .tagline { font-size: 10px; color: #5c7a76; }
+    .stats { display: flex; border-bottom: 1px solid #1f2d33; }
+    .stat { flex: 1; padding: 14px 16px; }
+    .stat + .stat { border-left: 1px solid #1f2d33; }
+    .stat .num {
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 20px; color: #97fce4;
+    }
+    .stat .lbl {
+      font-size: 9px; letter-spacing: .12em; text-transform: uppercase;
+      color: #5c7a76; margin-top: 3px;
+    }
+    section { padding: 12px 16px; border-bottom: 1px solid #1f2d33; }
+    label.row {
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 12px; color: #cfe3e0; cursor: pointer;
+    }
+    input[type="checkbox"] { accent-color: #97fce4; width: 15px; height: 15px; }
+    .field-label {
+      font-size: 9px; letter-spacing: .12em; text-transform: uppercase;
+      color: #5c7a76; margin-bottom: 6px;
+    }
+    input[type="text"] {
+      width: 100%;
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 11px;
+      background: #101b21; color: #cfe3e0;
+      border: 1px solid #1f2d33; border-radius: 6px;
+      padding: 7px 9px; outline: none;
+    }
+    input[type="text"]:focus { border-color: #97fce4; }
+    .hint { font-size: 10px; color: #5c7a76; margin-top: 6px; line-height: 1.4; }
+    .tickers { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 10px; color: #8fa6a2; line-height: 1.7; }
+    .tickers b { color: #97fce4; font-weight: 600; }
+    footer { padding: 10px 16px; font-size: 9px; color: #41595a; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="logo">◈ HAWK</span>
+    <span class="tagline">get paid to watch the tape</span>
+  </header>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="num" id="today-usd">$0.00</div>
+      <div class="lbl">Earned today</div>
+    </div>
+    <div class="stat">
+      <div class="num" id="total-usd">$0.00</div>
+      <div class="lbl">All time</div>
+    </div>
+  </div>
+
+  <section>
+    <label class="row">
+      <span>Show sponsored cards</span>
+      <input type="checkbox" id="enabled" checked />
+    </label>
+  </section>
+
+  <section>
+    <div class="field-label">Payout wallet (USDC, any EVM chain)</div>
+    <input type="text" id="wallet" placeholder="0x…" spellcheck="false" />
+    <div class="hint">Earnings accrue per impression and settle to this address. Estimates until slot settlement.</div>
+  </section>
+
+  <section>
+    <div class="field-label">Your most-watched tickers</div>
+    <div class="tickers" id="tickers">No data yet — open a chart.</div>
+  </section>
+
+  <footer>
+    Impressions count only while the tab is visible. One card per 45s slot. You keep 50% of the winning bid.
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
