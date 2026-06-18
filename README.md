@@ -89,7 +89,7 @@ open.
 | `app.hyperliquid.xyz`, `*.tradingview.com`, `www.binance.com` | So Hawk can place its card in the unused space on these specific sites. It reads the market symbol from the URL to keep the card relevant. Nothing else on the page is read or sent. |
 | Hawk API (`*.up.railway.app`) | Hawk's own backend — fetches the current sponsored card and reports an anonymous count of cards shown so your revenue share can be calculated. |
 
-Full privacy policy: https://hawk-portal-weld.vercel.app/privacy.html
+Full privacy policy: https://gethawk.xyz/privacy.html
 
 ---
 
@@ -99,7 +99,7 @@ Want to reach perp traders on the charts they never stop watching? You can targe
 specific ticker (e.g. only HYPE chart-watchers) or run network-wide. Bids start low and
 the highest bid serves first.
 
-Create a campaign at the Hawk portal: https://hawk-portal-weld.vercel.app/#/advertise
+Create a campaign at the Hawk portal: https://gethawk.xyz/#/advertise
 
 ---
 
