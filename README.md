@@ -12,7 +12,30 @@ Works on **Hyperliquid**, **TradingView**, and **Binance**.
 
 ---
 
-## Why this exists
+## Run it on any site
+
+[#run-it-on-any-site](#run-it-on-any-site)
+
+The default build ships with Hyperliquid, TradingView, and Binance because that's
+where perp traders live. But Hawk's architecture is generic — it's a content script
+that injects a sponsored card into any DOM target on any URL.
+
+Want to run ads on a different site? Four steps:
+
+1. **Fork this repo**
+2. **Add your URL pattern** to `manifest.json` under `content_scripts.matches` and
+   `host_permissions`
+3. **Set the injection selector** in `content.js` — pick the CSS selector for the
+   empty space where the card should appear
+4. **Reload the extension** — `chrome://extensions` → refresh icon on the Hawk card
+
+That's the whole modification. Run ads under any chart, any article, any feed, any
+dashboard on the internet — no platform permission needed, no Google, no Meta.
+
+If you ship a meaningful fork, open a PR and we'll add it to a "Community builds"
+section in this README.
+
+## About Hawk extension
 
 Perp traders stare at charts for hours. That attention is some of the most valuable in
 crypto — and right now it's worth nothing to the person actually doing the watching.
